@@ -1,24 +1,13 @@
----
-layout: compress
----
 <!DOCTYPE html>
-<html lang="en">
-<head>
-
-  {% include head.html %}
-
-</head>
-<body id="{% if page.title %}{{ page.title | slugify }}{% else %}home{% endif %}" class="{{ page.layout | downcase }}-layout">
-  
-  {% include header.html %}
-
-  <main class="💈">
-
-    {{ content }}
-    
-  </main>
-
-  {% include footer.html %}
-
-</body>
+<html>
+    {% include head.html %}
+    <body>
+        {% include navbar.html %}
+        {% include top.html %}
+        {% include about.html %}
+        {% include instagram.html %}
+        {% include contacts.html %}
+        {% include copyright.html %}
+        {% include tracking.html %}
+    </body>
 </html>
