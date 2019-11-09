@@ -1,0 +1,28 @@
+I"�<h1 id="simpol-blogging-creating-your-post">Simpol Blogging: Creating Your Post</h1>
+
+<p>All of the blog posts that syndicate into the homepage (index.html) feed and Sitemap are located within the <code class="highlighter-rouge">_posts</code> folder.</p>
+
+<p><strong>It’s easy to add new posts</strong>.</p>
+
+<ol>
+  <li>Create a new file in the <code class="highlighter-rouge">_posts</code> folder</li>
+  <li>Name the file, using this naming convention: <code class="highlighter-rouge">YYYY-MM-DD-post-name.markdown</code> (<em>or .md</em>)</li>
+  <li>Write out the Front Matter (see below)</li>
+</ol>
+
+<p>As for the Front Matter, Simpol Theme incorporates and includes a few options. <em>Always ensure that your file’s date and front matter date match up</em>. <strong>Although highly recommended</strong>, things like the <code class="highlighter-rouge">description</code> <code class="highlighter-rouge">author</code> and <code class="highlighter-rouge">header-img</code> are completely optional.</p>
+
+<p><strong><code class="highlighter-rouge">layout</code> <code class="highlighter-rouge">date</code> and <code class="highlighter-rouge">title</code> should not be considered optional</strong>.</p>
+
+<h3 id="example-this-posts-front-matter">Example: This Post’s Front Matter:</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	---
+	layout:     post
+	title:      "Simpol Blogging, Adding New Posts"
+	description: "How to add your first post. Simpol Theme blogging overview."
+	date:       2017-04-16 17:00:00
+	author:     "Scott Mathson"
+	header-img: img/posts/header-img/woman-typing-macbook.jpg
+	---
+</code></pre></div></div>
+:ET
