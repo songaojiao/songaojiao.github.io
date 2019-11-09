@@ -1,12 +1,10 @@
-<div class="post-share">
-  <h5>Share:</h5>
-  <a href="" title="Share on Twitter" onclick="window.open('https://twitter.com/home?status={{ page_title }} - {{ page.url | absolute_url }} {% if site.social.twitter %}by @{{ site.social.twitter }}{% endif %}', 'newwindow', 'width=500, height=225'); return false;" data-turbolinks="false">
-    <i class="fa fa-twitter" aria-hidden="true"></i>
-  </a>
-  <a href="" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}', 'newwindow', 'width=500, height=500'); return false;" data-turbolinks="false">
-    <i class="fa fa-facebook" aria-hidden="true"></i>
-  </a>
-  <a href="" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url={{ page.url | absolute_url }}', 'newwindow', 'width=550, height=400'); return false;" data-turbolinks="false">
-    <i class="fa fa-google-plus" aria-hidden="true"></i>
-  </a>
-</div>
+<ul class="post__social">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+  <li><a href="https://twitter.com/intent/tweet?&text={{ page.title }}+{{ page.url | absolute_url }}{% if page.author %}+by+{{ page.author }}{% endif %}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+  <li><a href="https://plus.google.com/share?url={{ page.url | absolute_url }}" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+  <li><a href="https://www.linkedin.com/shareArticle?mini=true&source={{ page.title }}&summary={{ page.description }}&url={{ page.url | absolute_url}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+  <li><a href="https://www.stumbleupon.com/badge/?url={{ page.url | absolute_url }}" target="_blank"><i class="fa fa-stumbleupon"></i></a></li>
+  <li><a href="https://www.reddit.com/submit?url={{ page.url | absolute_url }}" target="_blank"><i class="fa fa-reddit-alien"></i></a></li>
+  <li><a href="https://www.tumblr.com/share/link?url={{ page.url | absolute_url }}" target="_blank"><i class="fa fa-tumblr"></i></a></li>
+  <li><a href="https://www.pinterest.com/pin/create/link/?description={{ page.description }}&media={{ page.image | absolute_url }}&url={{ page.url | absolute_url }}" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+</ul>
