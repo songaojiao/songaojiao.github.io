@@ -1,25 +1,16 @@
-# Site settings
-# in the templates available like {{ site.myvariable }}.
-title: Clean portfolio theme for Jekyll powered by Bootstrap 4.
-email: your-email@domain.com
-brand: Your Name
-headline: Inventor, Engineer and Futurist
-description: > # this means to ignore newlines until "baseurl:"
-  New Site
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://example.com" # the base hostname & protocol for your site
-copyright: 2016 Whatever Company, Inc. All Rights Reserved.
+title: Mr.Brown
+description: Mr.Brown is a responsive jekyll theme
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: ':title/'
+baseurl: "/mr-brown" # the subpath of your site, e.g. /blog
 
-# Build settings
-markdown: kramdown
+# Comments
+discus_identifier: mr-brown
+txtpen_identifier: raizer85
 
-# Account ids
-snapwidget: 247552
-
-# Contacts
-email: your.name@gmail.com
-phone: +1-800-555-2016
-
-# Tracking
-googleAnalitycsID: UA-83933844-1
-
+# Social settings
+twitter_url: https://twitter.com/artemsheludko_
+facebook_url: https://facebook.com/
+googleplus_url: https://plus.google.com/
+instagram_url: https://instagram.com
+github_url: https://github.com/artemsheludko/
