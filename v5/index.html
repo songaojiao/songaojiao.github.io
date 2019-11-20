@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>爱你</title>
+    <title>情人节快乐</title>
     <style>
       img {
         width: 100%;
       }
       body {
-        min-height: 1vh;
+        min-height: 100vh;
         background: linear-gradient(#1d2b64, #f8cdda);
         color: #fff;
         font-family: PingFangSC-Regular;
@@ -60,7 +60,7 @@
       marquee {
         background: none;
       }
-       @media screen and (min-width: 800px) {
+      @media screen and (min-width: 800px) {
         .container {
           width: 350px;
           margin: 0 auto;
@@ -76,10 +76,9 @@
         >
           <img src="./images/55.jpg" alt="" class="avatar" />
           <img src="./images/55.jpg" alt="" class="avatar shadow" />
-          <span style="margin-left: 10px" id="name">薇薇</span>
+          <span style="margin-left: 10px" id="name">小皮咖</span>
         </div>
-        <marquee scrolldelay="0" scrollamount="10" direction="down"  height="400" width="320" vspace="10" >
-         
+        <marquee scrolldelay="0" scrollamount="20">
           <img src="./images/1.jpg" />
           <img src="./images/2.jpg" />
           <img src="./images/3.jpg" />
@@ -98,15 +97,28 @@
           您的浏览器不支持 audio 标签。
         </audio>
         <div class="btn-group">
-          <div class="sure" onclick="alert('我也超级爱你呢\\(^o^)/~')">
-            爱我?
+          <div class="sure" onclick="alert('情人节快乐\\(^o^)/~')">
+            确定
           </div>
-          <div class="cancel" onclick="alert('哼,那我也超级爱你')">不爱?</div>
+          <div class="cancel" onclick="alert('取消无效，请重新选择')">取消</div>
         </div>
       </div>
     </div>
     <script>
-      
+      function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) {
+          return r[2];
+        }
+        return null;
+      }
+      window.onload = function() {
+        let name = getQueryString("name");
+        document.getElementById("name").innerHTML = decodeURIComponent(
+          decodeURIComponent(name)
+        );
+      };
     </script>
   </body>
 </html>
