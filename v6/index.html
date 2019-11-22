@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Love</title>
     <style>
         * {
             padding: 0;
@@ -11,15 +11,15 @@
         }
         
         #box {
-            width: 99.5%;
-            background : url("./love/25.jpg") no-repeat center;
+            width: 99.9%;
+            background : url("./love/25.jpg");
+            background-size: 100% 100%;
             border: 1px solid darkgrey;
             float: left;
         }
-        button {
-            width: 200px;
-            height: 40px;
-            float: left;
+        #dv{
+            width: 100%;
+            background-size: 100%;
         }
         .photo{
             width: 200px;
@@ -30,15 +30,17 @@
         }
     </style>
 </head>
-<div id="box"></div>
+<div id="dv"></div>
 
-<body>
+<body id="box">
 
     <script>
+        alert("加载过慢, 多刷新几次 点击屏幕稍微慢点, 爱你呦!")
         var box = document.getElementById('box');
-        var xw = document.documentElement.clientHeight - 10;
-        box.style.height = xw+'px';
-        box.onclick = function() {
+        var xw = document.documentElement.clientHeight-2;
+        dv.style.height = xw+'px';
+        // box.style.height = xw+'px';
+        dv.onclick = function() {
             var dian = document.createElement('div');
             dian.className = "photo";
           
@@ -51,7 +53,7 @@
             dian.style.border = "3px solid "+g;
             dian.style.backgroundImage = "url(./love/"+p+".jpg)";
 
-            box.appendChild(dian);
+            dv.appendChild(dian);
 
 
             var dianLeft = dian.offsetLeft;
@@ -64,16 +66,16 @@
             var ltar = parseInt(Math.random() * 10 + 1);
             var ttar = parseInt(Math.random() * 10 + 1);
             setInterval(function() {
-                if (dianLeft > maxleft) {
+                if (dianLeft > maxleft - 10) {
 
                     ltar = -1;
                 } else if (dianLeft == 0) {
 
                     ltar = 1;
                 }
-                if (dianTop > maxtop) {
+                if (dianTop > maxtop - 10) {
                     ttar = -1;
-                } else if (dianTop == 100) {
+                } else if (dianTop == 0) {
                     ttar = 1;
                 }
                 dianLeft += ltar;
@@ -86,13 +88,14 @@
             }, 1)
             var arr = document.getElementsByClassName("photo");
             if (arr.length > 18){
-                box.removeChild(arr[0]); 
+                dv.removeChild(arr[0]); 
             }
         }
         var i=0;
         setInterval(function(){
             i++;
-            box.style.background = "url(./love/"+i+".jpg) no-repeat center";
+            dv.style.background = "url(./love/"+i+".jpg) ";
+            dv.style.backgroundSize = "100% 100%";
             if(i>=25){
                 i=0;
             }
