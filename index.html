@@ -1,12 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Love</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        #box {
+            width: 99.9%;
+            background : url("./love/25.jpg");
+            background-size: 100% 100%;
+            border: 1px solid darkgrey;
+            float: left;
+        }
+        #dv{
+            width: 100%;
+            background-size: 100%;
+        }
+        .photo{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            border-radius: 50%;
+            background-size: 100%;
+        }
+    </style>
 </head>
-<body>
-    <p>是啊, 她已经不爱我了. 就这样吧</p>
+<div id="dv"></div>
+
+<body id="box">
+    <audio
+    src="http://ip.h5.nf01.sycdn.kuwo.cn/5d9fa8b773a68ee9fe6110e4c71cd528/5dd94330/resource/n3/28/33/2378607993.mp3"
+    autoplay
+    loop
+  >
+    您的浏览器不支持 audio 标签。
+  </audio>
+    <script>
+        alert("加载过慢, 多刷新几次 点击屏幕稍微慢点, 爱你呦!")
+        var box = document.getElementById('box');
+        var xw = document.documentElement.clientHeight-2;
+        dv.style.height = xw+'px';
+        // box.style.height = xw+'px';
+        dv.onclick = function() {
+            var dian = document.createElement('div');
+            dian.className = "photo";
+          
+            var a = parseInt(Math.random() * 10);
+            var b = parseInt(Math.random() * 10);
+            var c = parseInt(Math.random() * 10);
+            var p = parseInt(Math.random() * 24);
+            var g = "rgb(" + a +','+ b +','+ c + ")";
+
+            dian.style.border = "3px solid "+g;
+            dian.style.backgroundImage = "url(./love/"+p+".jpg)";
+
+            dv.appendChild(dian);
+
+
+            var dianLeft = dian.offsetLeft;
+            var dianTop = dian.offsetTop;
+            var boxwidth = box.offsetWidth;
+            var boxheight = box.offsetHeight;
+            var maxleft = boxwidth - dian.offsetWidth;
+            var maxtop = boxheight - dian.offsetHeight;
+
+            var ltar = parseInt(Math.random() * 10 + 1);
+            var ttar = parseInt(Math.random() * 10 + 1);
+            setInterval(function() {
+                if (dianLeft > maxleft - 10) {
+
+                    ltar = -1;
+                } else if (dianLeft == 0) {
+
+                    ltar = 1;
+                }
+                if (dianTop > maxtop - 10) {
+                    ttar = -1;
+                } else if (dianTop == 0) {
+                    ttar = 1;
+                }
+                dianLeft += ltar;
+                dianTop += ttar;
+
+                dian.style.left = dianLeft + "px";
+                dian.style.top = dianTop + "px";
+
+
+            }, 1)
+            var arr = document.getElementsByClassName("photo");
+            if (arr.length > 18){
+                dv.removeChild(arr[0]); 
+            }
+        }
+        var i=0;
+        setInterval(function(){
+            i++;
+            dv.style.background = "url(./love/"+i+".jpg) ";
+            dv.style.backgroundSize = "100% 100%";
+            if(i>=25){
+                i=0;
+            }
+        }, 2222);
+    </script>
 </body>
-</html>
+<html>
